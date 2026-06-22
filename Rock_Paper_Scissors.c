@@ -20,13 +20,11 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &user);
 
-        // Input validation
         while (user < 0 || user > 3) {
             printf("Invalid choice! Enter again: ");
             scanf("%d", &user);
         }
 
-        // Exit condition
         if (user == 0) {
             printf("\n===== FINAL SCORE =====\n");
             printf("You: %d\n", userScore);
@@ -44,7 +42,6 @@ int main() {
             break;
         }
 
-        // Computer choice
         comp = rand() % 3 + 1;
 
         printf("\nYou chose: ");
@@ -65,7 +62,6 @@ int main() {
 
         printf("\n");
 
-        // Decide winner
         if (user == comp) {
             printf("Result: Draw!\n");
             draws++;
